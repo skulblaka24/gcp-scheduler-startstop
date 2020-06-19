@@ -10,7 +10,8 @@ Steps
 -----
 
 1. Labels
-When creating an compute instance on GCP, add a label either automatically or manually like so:
+
+	When creating an compute instance on GCP, add a label either automatically or manually like so:
 	* Go to "Compute Engine" then "VM Instances".
 	* On the right side, click on "Show Info Panel".
 	* Select the instances for which you want to add a label.
@@ -22,6 +23,7 @@ When creating an compute instance on GCP, add a label either automatically or ma
 	This label will allow us to target the right instance to manage.
 
 2. Functions
+	
 	Create the Start function:
 	* Access the "Cloud Functions" page in the GCP Console.
 	* Click on "CREATE FUNCTION".
@@ -61,6 +63,7 @@ When creating an compute instance on GCP, add a label either automatically or ma
 	* Click on "Create".
 
 3. Tasks
+	
 	Create the scheduled task to run the function:
 
 	The "start" task:
@@ -74,12 +77,11 @@ When creating an compute instance on GCP, add a label either automatically or ma
 	* In Target, use "Pub/Sub".
 	* In Topic, put the topic name we've choose earlier: "start-instance-event".
 	* And the payload is:
-	* <pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}
-	* </code></pre>
+	<pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}
+	</code></pre>
 	* Click on "Create".
 
 	The "stop" task:
-
 	* Access the "Cloud Scheduler" page in the GCP Console.
 	* Click on "CREATE JOB".
 	* Set Name to shutdown-vault-instances.
@@ -90,8 +92,8 @@ When creating an compute instance on GCP, add a label either automatically or ma
 	* In Target, use "Pub/Sub".
 	* In Topic, put the topic name we've choose earlier: "stop-instance-event".
 	* And the payload is:
-	* <pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}
-	* </code></pre>
+	<pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}
+	</code></pre>
 	* Click on "Create".
 
 
