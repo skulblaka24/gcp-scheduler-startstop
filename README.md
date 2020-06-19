@@ -77,8 +77,7 @@ Steps
 	* In Target, use "Pub/Sub".
 	* In Topic, put the topic name we've choose earlier: "start-instance-event".
 	* And the payload is:
-	<pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}
-	</code></pre>
+	<pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}</code></pre>
 	* Click on "Create".
 
 	The "stop" task:
@@ -92,8 +91,7 @@ Steps
 	* In Target, use "Pub/Sub".
 	* In Topic, put the topic name we've choose earlier: "stop-instance-event".
 	* And the payload is:
-	<pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}
-	</code></pre>
+	<pre><code>{"zone":"europe-west1-c","label":"instance_type=vault"}</code></pre>
 	* Click on "Create".
 
 
