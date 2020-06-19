@@ -9,7 +9,7 @@ This repository is here to explain how to schedule automatically the start and t
 Steps
 -----
 
-1. Labels
+1. **Labels**
 
 	When creating an compute instance on GCP, add a label either automatically or manually like so:
 	* Go to "Compute Engine" then "VM Instances".
@@ -22,7 +22,7 @@ Steps
 
 	This label will allow us to target the right instance to manage.
 
-2. Functions
+2. **Functions**
 	
 	Create the Start function:
 	* Access the "Cloud Functions" page in the GCP Console.
@@ -62,7 +62,7 @@ Steps
 	* For the field "Function to execute", write "stopInstancePubSub".
 	* Click on "Create".
 
-3. Tasks
+3. **Tasks**
 	
 	Create the scheduled task to run the function:
 
